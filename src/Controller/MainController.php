@@ -7,11 +7,14 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/main", name="main_")
+ */
 class MainController extends AbstractController
 {
 
     /**
-     * @Route ("/", name="main_home")
+     * @Route ("/", name="home")
      */
     public function home()
     {
@@ -19,11 +22,11 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/test", name="main_test")
+     * @Route("/about_us", name="about_us")
      */
-    public function test()
+    public function aboutUs()
     {
-        return $this->render("main/test.html.twig");
+        return $this->render("main/aboutUs.html.twig");
     }
 
 }
