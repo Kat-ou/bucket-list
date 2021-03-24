@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/main", name="main_")
+ * @Route("", name="main_")
  */
 class MainController extends AbstractController
 {
@@ -26,7 +26,7 @@ class MainController extends AbstractController
      */
     public function aboutUs()
     {
-        return $this->render("main/aboutUs.html.twig");
+        return $this->render("main/about_us.html.twig");
     }
 
 }

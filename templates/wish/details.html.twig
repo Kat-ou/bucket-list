@@ -3,7 +3,23 @@
 {% block title %} {{ parent()}} | Détails{% endblock %}
 
 {% block body %}
-    <h1> titre</h1>
+    <h2> {{ wish.title }}</h2>
+
+    <article>
+        <div author>
+            by {{ wish.author }}
+        </div>
+
+        <div class="description">
+            {{ wish.description }}
+        </div>
+
+        <div class="date">
+            {{ wish.dateCreated|date('d-m-Y') }}
+        </div>
+
+
+    </article>
 
 
 {% endblock %}

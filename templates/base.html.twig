@@ -50,12 +50,10 @@
                             <a class="nav-link" href="{{ path('main_about_us') }}">About US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">blabla</a>
+                            <a class="nav-link" href="{{ path('wish_list') }}">All wishes</a>
                         </li>
                     </ul>
-                    <span class="navbar-text">
-        Le top des meilleurs wish
-      </span>
+                    <span class="navbar-text">Le top des meilleurs wish</span>
                 </div>
             </div>
         </nav>
@@ -67,7 +65,7 @@
     </main>
 
     <footer>
-        <div>&copy;{{ "now"|date("Y") }} Bucket-List!</div>
+        <div class="fixed-bottom footer-copyright text-center py-3">&copy;{{ "now"|date("Y") }} Bucket-List!</div>
     </footer>
 </div>
 </body>
