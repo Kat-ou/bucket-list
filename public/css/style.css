@@ -2,6 +2,6 @@ body{
     background: salmon;
 }
 
-ul{
+ul.no-bullets {
     list-style: none;
 }

@@ -4,18 +4,23 @@
 
 {% block body %}
     <h2>All wishes</h2>
-    {% for wish in wishes %}
-        <article>
-            <div class="container">
+    <div class="row">
+        {% for wish in wishes %}
+            <article class="col-6">
 
-                <ul>
-                    <li>
-                        <a href={{ path('wish_details', {id: wish.id}) }}>{{ wish.title }}</a>
-                        <p>{{ wish.category.name }}</p>
 
-                    </li>
-                </ul>
-            </div>
-        </article>
-    {% endfor %}
+
+                    <ul class="list-inline">
+
+                        <li class="list-inline-item">
+                            <a href={{ path('wish_details', {id: wish.id}) }}>{{ wish.title }}</a>
+                            <p>{{ wish.category.name }}</p>
+                        </li>
+
+                    </ul>
+
+
+            </article>
+        {% endfor %}
+    </div>
 {% endblock %}
