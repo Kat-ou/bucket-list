@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent()}} | Détails{% endblock %}
+{% block title %} {{ parent() }} | Détails{% endblock %}
 
 {% block body %}
     <h2> {{ wish.title }}</h2>
 
     <article>
-        <div author>
+
+        <div category>Catégorie:
+            {{ wish.category.name }}
+        </div>
+        <div class="author">
             by {{ wish.author }}
         </div>
 

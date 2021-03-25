@@ -6,11 +6,16 @@
     <h2>All wishes</h2>
     {% for wish in wishes %}
         <article>
-            <ul>
-                <li>
-                    <a href={{ path('wish_details', {id: wish.id}) }}>{{ wish.title }}</a>
-                </li>
-            </ul>
+            <div class="container">
+
+                <ul>
+                    <li>
+                        <a href={{ path('wish_details', {id: wish.id}) }}>{{ wish.title }}</a>
+                        <p>{{ wish.category.name }}</p>
+
+                    </li>
+                </ul>
+            </div>
         </article>
     {% endfor %}
 {% endblock %}

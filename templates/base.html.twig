@@ -30,8 +30,6 @@
 <div class="container">
 
     <header>
-        <h1></h1>
-
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -52,6 +50,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('wish_list') }}">All wishes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('wish_form') }}">Your Wish</a>
+                        </li>
                     </ul>
                     <span class="navbar-text">Le top des meilleurs wish</span>
                 </div>
@@ -59,6 +60,14 @@
         </nav>
 
     </header>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
     <main>
         {% block body %}{% endblock %}

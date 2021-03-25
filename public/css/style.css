@@ -1,3 +1,7 @@
 body{
     background: salmon;
 }
+
+ul{
+    list-style: none;
+}

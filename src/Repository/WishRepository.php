@@ -22,8 +22,8 @@ class WishRepository extends ServiceEntityRepository
     public function findWishList(): ?array
     {
 
-        //enQueryBuilder
-        $queryBuilder = $this->createQueryBuilder('w');
+        //en QueryBuilder + ajoute une jointure à notre requête pour éviter de multiples requêtes SQL réalisées par Doctrine
+        $queryBuilder = $this->createQueryBuilder('w') ->join("w.category",'c')->addSelect('c');
 
         //ajoute des clauses WHERE
         $queryBuilder
